@@ -1,0 +1,30 @@
+public class Main {
+    public static void brute(int[] a)
+    {
+        int ms=Integer.MIN_VALUE;
+        int cs=0;
+        for(int i=0; i<a.length; i++)
+        {
+            int start =i;
+            for(int j=i;j<a.length;j++)
+            {
+                int end=j;
+                cs=0;
+                for(int k=start;k<=end;k++)
+                {
+                    cs=cs+a[k];
+                }
+                System.out.println(cs);
+                if(ms<cs)
+                {
+                    ms=cs;
+                }
+            }
+        }
+    }
+    public static void main(String[] args)
+    {
+        int[] a ={2,4,6,8,10};
+        brute(a);
+    }
+}
